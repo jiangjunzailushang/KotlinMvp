@@ -61,7 +61,7 @@ class MainActivity : BaseActivity() {
 
     //初始化底部菜单
     private fun initTab() {
-        (0 until mTitles.size)
+        (mTitles.indices)
                 .mapTo(mTabEntities) { TabEntity(mTitles[it], mIconSelectIds[it], mIconUnSelectIds[it]) }
         //为Tab赋值
         tab_layout.setTabData(mTabEntities)
